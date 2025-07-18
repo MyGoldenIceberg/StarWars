@@ -116,7 +116,7 @@ docker run -d -p 5198:5198 --name star-wars-api --network swapi-network star-war
 ## 🗃️ Database (SQL Server)
 
 ### 🔧 Stack
-- SQL Server 2022 Express
+- SQL Server 2019 Express
 - Persisted volume for data
 - Password protected (`YourStrong!Passw0rd`)
 - Port 1433 exposed for remote management
