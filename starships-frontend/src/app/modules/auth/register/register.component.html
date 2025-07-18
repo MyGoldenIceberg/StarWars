@@ -1,0 +1,32 @@
+<div class="register-container mat-typography">
+  <div class="register-card mat-elevation-z4">
+    <h2 class="mat-headline-4">Create Account</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email" />
+        <mat-error *ngIf="form.get('email')?.hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email')">Invalid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Enter password" />
+        <mat-error *ngIf="form.get('password')?.hasError('required')">Password is required</mat-error>
+        <mat-error *ngIf="form.get('password')?.hasError('minlength')">Minimum 6 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm password" />
+        <mat-error *ngIf="form.errors?.['passwordMismatch']">Passwords do not match</mat-error>
+      </mat-form-field>
+      <div class="button-group">
+        <button mat-stroked-button color="primary" class="register-btn" type="submit" [disabled]="form.invalid">
+            Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

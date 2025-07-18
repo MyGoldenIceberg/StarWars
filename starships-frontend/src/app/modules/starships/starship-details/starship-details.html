@@ -1,0 +1,33 @@
+<h2 class="mat-headline-4">{{ starship.name }}</h2>
+
+<div class="detail-list">
+  <p><strong>Model:</strong> {{ starship.model }}</p>
+  <p><strong>Manufacturer:</strong> {{ starship.manufacturer }}</p>
+  <p><strong>Class:</strong> {{ starship.starshipClass }}</p>
+  <p><strong>Cost (credits):</strong> {{ starship.costInCredits }}</p>
+  <p><strong>Speed:</strong> {{ starship.maxAtmospheringSpeed }}</p>
+  <p><strong>Hyperdrive Rating:</strong> {{ starship.hyperdriveRating }}</p>
+  <p><strong>Crew:</strong> {{ starship.crew }}</p>
+  <p><strong>Passengers:</strong> {{ starship.passengers }}</p>
+  <p><strong>Cargo Capacity:</strong> {{ starship.cargoCapacity }}</p>
+  <p><strong>Consumables:</strong> {{ starship.consumables }}</p>
+  <p><strong>MGLT:</strong> {{ starship.mglt }}</p>
+
+  <p><strong>Films:</strong></p>
+  <ul *ngIf="starship.films?.length > 0; else noFilms">
+    <li *ngFor="let film of starship.films">{{ film }}</li>
+  </ul>
+  <ng-template #noFilms>
+    <p><em>None</em></p>
+  </ng-template>
+
+  <p><strong>Pilots:</strong></p>
+  <ul *ngIf="starship.pilots?.length > 0; else noPilots">
+    <li *ngFor="let pilot of starship.pilots">{{ pilot }}</li>
+  </ul>
+  <ng-template #noPilots>
+    <p><em>None</em></p>
+  </ng-template>
+
+  <p><strong>Created:</strong> {{ starship.createdOn | date:'medium' }}</p>
+</div>

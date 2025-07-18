@@ -1,0 +1,47 @@
+body {
+  font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+  background-color: #5e5e77;
+  margin: 0;
+}
+
+
+.snackbar-success {
+  background-color: #4caf50 !important;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.snackbar-error {
+  background-color: #f44336 !important;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mat-select-panel {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+.mat-option {
+  color: rgb(243, 235, 235);
+  background-color: white;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+
+::ng-deep div > .mat-mdc-select-panel{
+  background: rgb(133, 176, 200) !important;
+}
+
+.toolbar-spacer {
+  height: 30px; 
+}

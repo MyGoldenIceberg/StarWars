@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  padding: 5rem 2rem 2rem;
+  background-color: #1a1a2e;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #00e5ff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  
+  flex-direction: column;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.button-group {
+  margin-top: 1.5rem;
+  text-align: right;
+
+  button {
+    background-color: #00e5ff;
+    color: #000;
+    font-weight: 500;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #00bcd4;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+}

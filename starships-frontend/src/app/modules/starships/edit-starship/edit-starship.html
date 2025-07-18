@@ -1,0 +1,91 @@
+
+
+<div class="scroll-container">
+  <h2 class="mat-headline-4">Edit Starship</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="edit-form">
+    <div class="form-grid">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Model</mat-label>
+        <input matInput formControlName="model" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Manufacturer</mat-label>
+        <input matInput formControlName="manufacturer" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cost In Credits</mat-label>
+        <input matInput formControlName="costInCredits" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Length</mat-label>
+        <input matInput formControlName="length" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Max Atmosphering Speed</mat-label>
+        <input matInput formControlName="maxAtmospheringSpeed" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Consumables</mat-label>
+        <input matInput formControlName="consumables" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Starship Class</mat-label>
+        <input matInput formControlName="starshipClass" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hyperdrive Rating</mat-label>
+        <input matInput formControlName="hyperdriveRating" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Crew</mat-label>
+        <input matInput formControlName="crew" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Passengers</mat-label>
+        <input matInput formControlName="passengers" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>MGLT</mat-label>
+        <input matInput formControlName="mglt" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cargo Capacity</mat-label>
+        <input matInput formControlName="cargoCapacity" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Pilots (comma-separated)</mat-label>
+        <input matInput formControlName="pilots" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Films (comma-separated)</mat-label>
+        <input matInput formControlName="films" />
+      </mat-form-field>
+  </div>
+
+
+    <div class="button-group">
+      <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
+        Save Changes
+      </button>
+    </div>
+  </form>
+</div>

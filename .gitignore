@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/star-wars-api/.vs
+/star-wars-api/star-wars-api/bin/Debug/net8.0
+/star-wars-api/star-wars-api/obj/Container
+/star-wars-api/star-wars-api/obj
+/star-wars-api/star-wars.entity/bin/Debug/net8.0
+/star-wars-api/star-wars.entity/obj
+/star-wars-api/starship.test/bin/Debug/net8.0
+/star-wars-api/starship.test/obj

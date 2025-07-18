@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+h2 {
+  color: #00e5ff;
+  margin-bottom: 1.5rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+
+.scroll-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Optional: Custom scrollbar */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #00e5ff;
+  border-radius: 3px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+button[type="submit"] {
+  background-color: #00e5ff;
+  color: #000;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #00bcd4;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}

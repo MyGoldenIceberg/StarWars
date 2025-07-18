@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+h2 {
+  color: #00e5ff;
+  margin-bottom: 1rem;
+}
+
+.detail-list p,
+.detail-list ul {
+  margin: 0.5rem 0;
+  font-size: 14px;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  font-size: 13px;
+  color: #90caf9;
+}
