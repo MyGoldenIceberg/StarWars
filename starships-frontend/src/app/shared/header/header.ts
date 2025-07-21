@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../../environments/environment';
+import { AuthService } from '../../modules/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,8 @@ import { environment } from '../../../environments/environment';
 export class HeaderComponent {
   constructor(private http: HttpClient,
     private router: Router,
-    private snackBar: MatSnackBar) {}
+    private snackBar: MatSnackBar,
+    private authService: AuthService) {}
 
   logout(): void {
     this.http.post(`${environment.apiUrl}/auth/logout`, {}).subscribe({

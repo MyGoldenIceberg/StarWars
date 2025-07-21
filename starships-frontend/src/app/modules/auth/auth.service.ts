@@ -14,9 +14,15 @@ export interface AuthResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
+  private readonly tokenKey = 'access_token';
   private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
+
+  isLoggedIn(): boolean {
+    const token = localStorage.getItem(this.tokenKey);
+    return !!token;
+  }
 
   login(credentials: { email: string; password: string }): Observable<AuthResponse> {
     const body = new HttpParams()
