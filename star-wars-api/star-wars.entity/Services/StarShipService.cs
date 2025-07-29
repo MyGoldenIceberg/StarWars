@@ -26,9 +26,9 @@ namespace star_wars.entity.Services
             _logger = logger;
         }
 
-        public async Task<ResultModel<PagedResult<Starship>>> GetAllAsync(StarshipSearchRequest request)
+        public async Task<ResultModel<PagedResult<StarshipQueryVM>>> GetAllAsync(StarshipSearchRequest request)
         {
-            var resultModel = new ResultModel<PagedResult<Starship>>();
+            var resultModel = new ResultModel<PagedResult<StarshipQueryVM>>();
 
             try
             {
@@ -54,6 +54,9 @@ namespace star_wars.entity.Services
 
 
                 var items = query
+                    .AsEnumerable()
+                    .Select(x => (StarshipQueryVM)x)
+                    .Where(x => x.Crew >= 100)
                     .OrderByDescending(s => s.CreatedOn)
                     .Skip((request.Page - 1) * request.PageSize)
                     .Take(request.PageSize)
@@ -62,7 +65,7 @@ namespace star_wars.entity.Services
                 if (totalCount == 0)
                     return resultModel;
 
-                resultModel.Data = new PagedResult<Starship>
+                resultModel.Data = new PagedResult<StarshipQueryVM>
                 {
                     Items = items,
                     TotalCount = totalCount,

@@ -11,7 +11,7 @@ namespace star_wars.entity.Services.Interface
 {
     public interface IStarShipService
     {
-        Task<ResultModel<PagedResult<Starship>>> GetAllAsync(StarshipSearchRequest request);
+        Task<ResultModel<PagedResult<StarshipQueryVM>>> GetAllAsync(StarshipSearchRequest request);
         Task<ResultModel<CreateStarshipDto>> CreateAsync(CreateStarshipDto dto);
         Task<ResultModel<string>> UpdateAsync(UpdateStarshipDto dto);
         Task<ResultModel<string>> DeleteAsync(Guid id);
